@@ -9,6 +9,6 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.appName('Test').getOrCreate()
 
-df = spark.read.csv('C:/Naveen/1_Udemy/sundog/SparkCourse/ml-100k/u.data', sep='\t')
+df = spark.read.csv('data/ml-100k/u.data', sep='\t')
 
 df.groupBy(df._c2).count().orderBy('count').show()
